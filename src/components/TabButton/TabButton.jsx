@@ -1,11 +1,11 @@
-import './TabButton.css';
+import "./TabButton.css";
 
-export default function TabButton({children, onSelect}){
-    return (
-        <li>
-            <button onClick={onSelect}>
-                {children}
-            </button>
-        </li>
-    )
+export default function TabButton({ children, onSelect, isSelected }) {
+  return (
+    <li>
+      <button onClick={onSelect} className={isSelected && "active"}>
+        {children}
+      </button>
+    </li>
+  );
 }
